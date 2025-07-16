@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Syed Ahmad Ali - Professional Freelance Services</title>
+  <style>
+    /* Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #d20ab0 0%, #ACB6E5 100%);
+      color: #222831;
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      scroll-behavior: smooth;
+    }
+    a {
+      text-decoration: none;
+      color: #f5ee0f;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #d9ed21;
+    }
+    header {
+      background: rgba(208, 238, 98, 0.9);
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    header h1 {
+      font-size: 3.2rem;
+      color: #eeeeee;
+      margin-bottom: 8px;
+      text-shadow: 1px 1px 3px #222831;
+    }
+    header p {
+      font-size: 1.3rem;
+      font-style: italic;
+      color: #dff6f0;
+      text-shadow: 1px 1px 2px #222831;
+    }
+    nav {
+      margin-top: 20px;
+    }
+    nav a {
+      margin: 0 22px;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #c3f0f2;
+      padding-bottom: 5px;
+      border-bottom: 3px solid transparent;
+    }
+    nav a:hover,
+    nav a:focus {
+      border-bottom-color: #3a50cb;
+      color: #ffffff;
+    }
+    main {
+      max-width: 900px;
+      margin: 60px auto 40px;
+      background: #ffffffdd;
+      padding: 40px 45px;
+      border-radius: 15px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease forwards;
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    section {
+      margin-bottom: 70px;
+    }
+    h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #222831;
+      position: relative;
+      padding-bottom: 12px;
+      border-bottom: 5px solid #3e41d7;
+      letter-spacing: 1px;
+    }
+    h3 {
+      font-size: 1.7rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+      color: #393e46;
+      border-left: 5px solid #67c140;
+      padding-left: 12px;
+      margin-top: 25px;
+    }
+    p {
+      font-size: 1.12rem;
+      color: #393e46;
+      margin-bottom: 20px;
+    }
+    ul {
+      margin-left: 28px;
+      margin-bottom: 25px;
+      color: #222831;
+    }
+    ul li {
+      font-size: 1.1rem;
+      margin-bottom: 14px;
+      padding-left: 8px;
+      position: relative;
+    }
+    ul li::before {
+      content: "✔";
+      color: #00adb5;
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: bold;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1.12rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 15px 22px;
+      border: 1px solid #ddd;
+      text-align: center;
+      background: #fafafa;
+      transition: background-color 0.3s ease;
+    }
+    th {
+      background: #00adb5;
+      color: #fff;
+      font-weight: 700;
+    }
+    tbody tr:hover {
+      background-color: #d2f1f0;
+    }
+    .note {
+      margin-top: 18px;
+      font-style: italic;
+      color: #555;
+      font-size: 1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #contact p {
+      font-size: 1.2rem;
+      margin-bottom: 14px;
+      color: #222831;
+    }
+    #contact a {
+      font-weight: 600;
+      color: #00adb5;
+    }
+    #contact a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background: #222831;
+      text-align: center;
+      padding: 18px 20px;
+      font-size: 1rem;
+      color: #eeeeee;
+      letter-spacing: 1.3px;
+      font-weight: 600;
+      margin-top: 40px;
+      box-shadow: 0 -3px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      main {
+        margin: 40px 20px 30px;
+        padding: 30px 25px;
+      }
+      h2 {
+        font-size: 2.2rem;
+      }
+      h3 {
+        font-size: 1.4rem;
+      }
+      nav a {
+        margin: 0 14px;
+        font-size: 1.05rem;
+      }
+    }
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      main {
+        padding: 25px 15px;
+      }
+      nav a {
+        margin: 0 10px;
+        font-size: 1rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+      }
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Syed Ahmad Ali</h1>
+    <p>Your Trusted Freelance Expert in Digital Services & IT Solutions</p>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I’m <strong>Syed Ahmad Ali</strong>, a passionate and highly motivated freelancer with a Master’s degree in Computer Skills and over 1 year of professional experience in delivering outstanding digital and IT solutions. My journey as a freelancer is driven by my commitment to provide precise, efficient, and innovative services tailored to help businesses and individuals flourish in the digital era.</p>
+
+      <p>With a deep understanding of Microsoft Office tools, web technologies, and graphic design principles, I offer a comprehensive suite of services designed to meet a wide array of professional needs. My goal is to help you save time, increase productivity, and elevate your brand’s digital presence through meticulous attention to detail and customized solutions.</p>
+
+      <h3>What I Bring to the Table</h3>
+      <ul>
+        <li><strong>Expertise in Microsoft Office Suite:</strong> From crafting flawlessly formatted documents in Word to complex data manipulation in Excel and dynamic PowerPoint presentations, I ensure your materials are polished, professional, and impactful.</li>
+        <li><strong>Fast and Accurate Typing & Document Preparation:</strong> Save precious hours with my swift, detail-oriented typing, proofreading, and document editing services, crafted to perfection.</li>
+        <li><strong>Website Development:</strong> I build responsive, user-friendly, and SEO-optimized websites using HTML, CSS, and JavaScript, designed to showcase your brand effectively and engage your target audience.</li>
+        <li><strong>Creative Graphic Design:</strong> From logos and branding materials to social media graphics and marketing collateral, I design eye-catching visuals that resonate and convert.</li>
+      </ul>
+
+      <p>My approach is client-centered, emphasizing transparent communication, timely delivery, and quality assurance. Each project I undertake is not just a job but a partnership aimed at achieving your specific goals and ensuring your complete satisfaction.</p>
+
+      <h3>Why Choose Me?</h3>
+      <ul>
+        <li>A proven track record of delivering excellence to clients across various industries.</li>
+        <li>Personalized solutions that fit your unique needs and budget.</li>
+        <li>Responsive and clear communication at every stage.</li>
+        <li>A passion for helping your business grow through quality digital services.</li>
+      </ul>
+
+      <p>Whether you're a startup entrepreneur, a small business owner, or a busy professional, I’m here to provide reliable, affordable, and professional freelance services designed to help you achieve your vision.</p>
+
+      <p><strong>Let’s collaborate and make your ideas come to life with precision, creativity, and professionalism. Reach out today, and together we’ll build something exceptional!</strong></p>
+    </section>
+
+    <section id="pricing">
+      <h2>Pricing</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Basic</th>
+            <th>Standard</th>
+            <th>Premium</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Microsoft Word</td>
+            <td>$5 <br><small>(PKR 1500)</small></td>
+            <td>$6 <br><small>(PKR 1800)</small></td>
+            <td>$10 <br><small>(PKR 3000)</small></td>
+          </tr>
+          <tr>
+            <td>Microsoft Excel</td>
+            <td>$5 <br><small>(PKR 1500)</small></td>
+            <td>$8 <br><small>(PKR 2400)</small></td>
+            <td>$12 <br><small>(PKR 3600)</small></td>
+          </tr>
+          <tr>
+            <td>Microsoft PowerPoint</td>
+            <td>$5 <br><small>(PKR 1500)</small></td>
+            <td>$9 <br><small>(PKR 2700)</small></td>
+            <td>$15 <br><small>(PKR 4500)</small></td>
+          </tr>
+          <tr>
+            <td>Typing & Computer Skills</td>
+            <td>$5 <br><small>(PKR 1500)</small></td>
+            <td>$7 <br><small>(PKR 2100)</small></td>
+            <td>$10 <br><small>(PKR 3000)</small></td>
+          </tr>
+          <tr>
+            <td>Website Development</td>
+            <td>$20 <br><small>(PKR 6000)</small></td>
+            <td>$40 <br><small>(PKR 12000)</small></td>
+            <td>$60 <br><small>(PKR 18000)</small></td>
+          </tr>
+          <tr>
+            <td>Graphic Design</td>
+            <td>$5 <br><small>(PKR 1500)</small></td>
+            <td>$10 <br><small>(PKR 3000)</small></td>
+            <td>$25 <br><small>(PKR 7500)</small></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="note"><em>Note: Pricing varies depending on project complexity, deadlines, and specific client requirements. Contact me directly for a personalized quote tailored to your needs.</em></p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:syedahmadali390@gmail.com">syedahmadali390@gmail.com</a></p>
+      <p>Phone: <a href="tel:+923125394015">0312 539 4015</a></p>
+  </main>
+
+  <footer>
+    &copy; 2025 Syed Ahmad Ali — All Rights Reserved
+  </footer>
+</body>
+</html>
